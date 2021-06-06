@@ -1,0 +1,26 @@
+@Autowired和@Resource
+@Autowired是spring的注解,功能用来给对象装配bean,默认byType
+如果允许为空添加@Autowired(required=false),如果想要根据bean的名字装配
+
+@Resource是java的注解,按照bean的名字来装配, 实际上他有两个属性name,type
+分别是bean的name和type注入对象,默认不写的话以name寻找
+使用resource注解的装配顺序
+1.如果同时指定name和type,寻找到唯一匹配的bean装配,否则就抛异常
+2.如果指定name,就从spring容器中寻找匹配的bean装配,否则就抛异常
+3.如果指定了type就从spring容器中寻找匹配的bean装配,找不到或者找到了
+多个都会抛出异常
+4.如果type和name都不指定就按照byName进行装配,如果没有匹配就以type的方式
+匹配,这个时候和Autowired相同
+
+在controller的方法跳转到页面和其他的方法中可以使用转发和重定向的方式
+redirect:/hello
+forward:/hello
+
+
+@PathVariable 这个注解用来解析url模版参数
+ResultFul风格接口
+resultful是一种软件架构风格，不是一种标准，主要用来实现在不同客户端和
+服务端之间的前后端交互的解决方案
+
+每一个url都表示一个资源
+通过四种不同的http动词来服务器进行操作，进行表现转换
