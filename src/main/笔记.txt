@@ -24,3 +24,5 @@ resultful是一种软件架构风格，不是一种标准，主要用来实现�
 
 每一个url都表示一个资源
 通过四种不同的http动词来服务器进行操作，进行表现转换
+
+事务：https://blog.csdn.net/Trigl/article/details/50968079
